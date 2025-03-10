@@ -9,7 +9,7 @@ This repository contains a walk-through example of how to implement a simple reg
 A simple, exemplary, Feynman diagram of the process under consideration is shown below.
 
 <div style="text-align: center">
-  <img src=".assets/ttH-1l-tchan.png" alt="Feynman diagram" width="70%">
+  <img src=".assets/ttH-1l-tchan.png" alt="Feynman diagram" width="50%">
 </div>
 
 ## Pre-requisites and Environment Setup
