@@ -4,6 +4,7 @@ This repository contains a walk-through example of how to implement a simple reg
 
 - [Tutorial: Regression with PyTorch in High Energy Physics](#tutorial-regression-with-pytorch-in-high-energy-physics)
   - [Pre-requisites and Environment Setup](#pre-requisites-and-environment-setup)
+  - [Note on Environments](#note-on-environments)
   - [Further Reading](#further-reading)
   - [Resources](#resources)
 
@@ -32,10 +33,6 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Feel free to use whatever package manager you like; conda/mamba for example is very good at handling dependencies (and mamba is quick!). But, for the tutorial here just using pip and a python venv is sufficient. I also really like using containers for this kind of thing, but that is a topic for another tutorial! When you run the notebook, please choose the associated environment when you setup the notebook kernel.
-
-To disable the enviroment, you can run `deactivate`.
-
 You will need to also install the dataset we will be using. We use `git lfs` to handle the large file.
 
 ```bash
@@ -55,6 +52,8 @@ You should see the following files:
 ttH_fullSim_dev4vec_150k.h5
 ```
 
+## Note on Environments
+Feel free to use whatever package manager you like; conda/mamba for example is very good at handling dependencies (and mamba is quick!). But, for the tutorial here just using pip and a python venv is sufficient. Please choose the associated environment when you setup the notebook kernel.
 
 ## Further Reading
 See [Theory](./tutorial/theory.md) for a brief overview of the theory behind the applied ML tutorial.
