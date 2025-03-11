@@ -61,3 +61,5 @@ See [Theory](./tutorial/theory.md) for a brief overview of the theory behind the
 
 ## Resources
 Here is a list of amazing resources that I have found useful:
+
+- Deep Learning tuning playbook: https://github.com/google-research/tuning_playbook#choosing-the-batch-size
