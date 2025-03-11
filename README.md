@@ -36,6 +36,26 @@ Feel free to use whatever package manager you like; conda/mamba for example is v
 
 To disable the enviroment, you can run `deactivate`.
 
+You will need to also install the dataset we will be using. We use `git lfs` to handle the large file.
+
+```bash
+git lfs install
+git lfs pull
+```
+
+Verify the dataset has been downloaded correctly:
+
+```bash
+ls data/
+```
+
+You should see the following files:
+
+```bash
+ttH_fullSim_dev4vec_150k.h5
+```
+
+
 ## Further Reading
 See [Theory](./tutorial/theory.md) for a brief overview of the theory behind the applied ML tutorial.
 
