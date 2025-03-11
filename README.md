@@ -4,6 +4,7 @@ This repository contains a walk-through example of how to implement a simple reg
 
 - [Tutorial: Regression with PyTorch in High Energy Physics](#tutorial-regression-with-pytorch-in-high-energy-physics)
   - [Pre-requisites and Environment Setup](#pre-requisites-and-environment-setup)
+  - [Further Reading](#further-reading)
   - [Resources](#resources)
 
 A simple, exemplary, Feynman diagram of the process under consideration is shown below.
@@ -13,7 +14,14 @@ A simple, exemplary, Feynman diagram of the process under consideration is shown
 </div>
 
 ## Pre-requisites and Environment Setup
-TODO: explain set up
+
+Firstly, you will want to clone (or fork) this repository.
+
+```bash
+git clone https://github.com/LeviSamuelEvans/pytorch-regression-tutorial.git
+```
+
+Then, you will want to create a virtual environment and install the dependencies.
 
 ```bash
 python -m venv venv
@@ -24,7 +32,12 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-- See [Theory](./tutorial/theory.md) for a brief overview of the theory behind the applied ML tutorial.
+Feel free to use whatever package manager you like; conda/mamba for example is very good at handling dependencies (and mamba is quick!). But, for the tutorial here just using pip and a python venv is sufficient. I also really like using containers for this kind of thing, but that is a topic for another tutorial! When you run the notebook, please choose the associated environment when you setup the notebook kernel.
+
+To disable the enviroment, you can run `deactivate`.
+
+## Further Reading
+See [Theory](./tutorial/theory.md) for a brief overview of the theory behind the applied ML tutorial.
 
 ## Resources
 Here is a list of amazing resources that I have found useful:
