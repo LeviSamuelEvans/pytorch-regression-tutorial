@@ -22,6 +22,12 @@ Firstly, you will want to clone (or fork) this repository.
 git clone https://github.com/LeviSamuelEvans/pytorch-regression-tutorial.git
 ```
 
+Then move into the repository.
+
+```bash
+cd pytorch-regression-tutorial
+```
+
 Then, you will want to create a virtual environment and install the dependencies.
 
 ```bash
