@@ -2,7 +2,7 @@
 This script converts data stored in ROOT files into HDF5 format with a structured layout. This is very useful for ML workflows. Some other file formats are also very popular, e.g. `parquet`, but this script is specifically designed for the HDF5 format and utilises `h5py`. It's worth doing some research yourself and experimenting with what is best for you!
 
 ---
-The script is designed to be flexible, allowing you to specify the features that you want to extract from your analysis ROOT files. Furthermore, there are different classes to facilitate the processing of different types of useful particle physics data.
+The script is designed to be flexible, allowing you to specify the features that you want to extract from your analysis ROOT files. Furthermore, there are different classes to facilitate the processing of different types of useful particle physics data. Currently, the output structure differs from that of the `.h5` used in the tutorial, since that used an older version of the script, but this is something I will address in the future.
 
 ## Features
 
@@ -34,6 +34,13 @@ You can install these via:
 pip install uproot numpy pandas h5py pyyaml rich tqdm
 ```
 **Note:** you should be careful not to corrupt your global python enviroment by just running `pip install ...` without using a virtual environment. Furthermore, in reality it really is best to manage packages using conda enviroments. I'll move the setup for this tutorial to a conda enviroment soon!
+
+## VSCode Extensions
+
+I highly, highly recommend the following extension, if you are using VSCode:
+- [h5web.vscode-h5web](https://marketplace.visualstudio.com/items?itemName=h5web.vscode-h5web)
+
+This allows you to view the HDF5 files in the VSCode editor, which is very useful for debugging etc. It's the best tool I've found so far, and warrants the 5 stars it has!
 
 ---
 
@@ -67,10 +74,57 @@ pip install uproot numpy pandas h5py pyyaml rich tqdm
    - `-O/--overwrite` : Overwrites the HDF5 file if it already exists (default is on so be careful! We have included a user prompt to ask you if you are sure you want to overwrite the file, so maybe not best for any batch stuff.).
 
 3. **Check the output**  
-   The resulting `output_store.h5` file will contain structured groups (e.g., `Files/filename_INPUTS/JETS`, `TARGETS/CLASSIFICATION`, etc.) with your data.
+   The resulting `output_store.h5` file will contain structured groups (e.g., `Files/filename_INPUTS/JETS`, `TARGETS/CLASSIFICATION`, etc.) with your data. An example is shown below.
 
 ---
 ## Output Structure example
+
+Here is an example of an output file structure after running the script:
+
+```bash
+|-Files                         
+|---combined_ttH_PP8_mc16a_AFII_root
+|-----INPUTS                    
+|-------ELECTRONS               
+|---------MASK                  
+|---------charge                
+|---------energy                
+|---------eta                   
+|---------phi                   
+|---------pt                    
+|-------GLOBAL_PROPERTIES       
+|---------HT_all                
+|---------met_met               
+|---------met_phi               
+|---------nJets                 
+|-------JETS                    
+|---------MASK                  
+|---------btag                  
+|---------energy                
+|---------eta                   
+|---------phi                   
+|---------pt                    
+|-------METADATA                
+|---------weight_jvt            
+|---------weight_leptonSF       
+|---------weight_mc             
+|---------weight_normalise      
+|---------weight_pileup         
+|-------MUONS                   
+|---------MASK                  
+|---------charge                
+|---------energy                
+|---------eta                   
+|---------phi                   
+|---------pt                    
+|-----TARGETS                   
+|-------CLASSIFICATION          
+|---------event_class           
+|-------REGRESSION              
+|---------higgs_pt              
+|---combined_ttH_PP8_mc16d_AFII_root
+```
+I have included this `test.h5` file in the repo in case you want to inspect it using the VSCode extension mentioned above.
 
 ## Notes & Customisation
 
