@@ -1,2 +1,26 @@
 features:
- -  
+  - jet_pt
+  - jet_eta
+  - jet_phi
+  - jet_e
+  - el_pt
+  - el_eta
+  - el_phi
+  - el_e
+  - el_charge
+  - mu_pt
+  - mu_eta
+  - mu_phi
+  - mu_e
+  - mu_charge
+  - jet_tagWeightBin_DL1r_Continuous
+  - met_met
+  - met_phi
+  - nJets
+  - L2_Reco_higgs_pt
+  - weight_mc
+  - weight_normalise
+  - weight_jvt
+  - weight_pileup
+  - weight_leptonSF
+  - HT_all
