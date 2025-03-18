@@ -137,8 +137,4 @@ I have included this `test.h5` file in the repo in case you want to inspect it u
 
 **Happy Converting!** If you have any issues or feature requests, feel free to adapt or extend the script to meet your analysis needs.
 
-Run `python convert_to_h5.py -h` to see the help message and usage instructions.
-
-<div style="text-align: center">
-  <img src=".assets/help_message.png" alt="Help message" width="50%">
-</div>
+Run `python convert_to_h5.py -h` to see the help message and usage instructions. (check .assets/help_message.png for reference example.)
